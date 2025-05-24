@@ -1,9 +1,11 @@
 /* Footer Styles */
 .footer {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f172a 100%);
+  background: linear-gradient(135deg,rgb(0, 0, 0) 0%,rgb(13, 32, 96) 50%,rgb(1, 7, 24) 100%);
   color: #ffffff;
   position: relative;
   overflow: hidden;
+  font-family: 'Afacad', sans-serif;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .footer::before {
@@ -13,7 +15,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  background: linear-gradient(90deg, transparent,rgb(50, 62, 81), transparent);
 }
 
 .footer-container {
@@ -23,10 +25,21 @@
 }
 
 .footer-content {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0 20px;
+}
+
+.footer-top-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
-  padding: 60px 0 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom-row {
+  padding-top: 40px;
 }
 
 /* Brand Section */
@@ -41,6 +54,7 @@
   margin-bottom: 20px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  text-decoration: none;
 }
 
 .footer-logo:hover {
@@ -48,30 +62,22 @@
 }
 
 .footer-logo-icon {
-  font-size: 32px;
-  animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.5));
-  }
-  to {
-    filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.8));
-  }
+  height: 36px;
+  width: auto;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
 }
 
 .footer-logo-text {
   font-size: 28px;
   font-weight: 700;
-  background: linear-gradient(135deg, #3b82f6, #60a5fa, #93c5fd);
+  background: linear-gradient(135deg, #ffffff, #e2e8f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .footer-description {
-  color: #cbd5e1;
+  color: #e2e8f0;
   line-height: 1.6;
   font-size: 15px;
   margin: 0;
@@ -99,7 +105,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  background: linear-gradient(90deg, #ffffff, #93c5fd);
   border-radius: 2px;
 }
 
@@ -110,7 +116,7 @@
 }
 
 .footer-link {
-  color: #cbd5e1;
+  color: #e2e8f0;
   text-decoration: none;
   font-weight: 400;
   font-size: 15px;
@@ -128,12 +134,12 @@
   left: 0;
   width: 0;
   height: 1px;
-  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  background: linear-gradient(90deg, #ffffff, #93c5fd);
   transition: width 0.3s ease;
 }
 
 .footer-link:hover {
-  color: #60a5fa;
+  color: #ffffff;
   transform: translateX(8px);
 }
 
@@ -155,19 +161,34 @@
 }
 
 .faculty-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding-left: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding-left: 0;
 }
 
 .faculty-link {
-  color: #94a3b8;
-  font-size: 14px;
+  color: #93c5fd;
+  font-size: 15px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .faculty-link:hover {
-  color: #3b82f6;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Developer Info */
@@ -177,11 +198,20 @@
   gap: 20px;
 }
 
+.developer-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
 .developer-name {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: #ffffff;
-  margin: 0;
+  margin: 0 0 16px 0;
   background: linear-gradient(135deg, #ffffff, #e2e8f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -204,18 +234,19 @@
   font-size: 16px;
   width: 20px;
   text-align: center;
+  color: #93c5fd;
 }
 
 .contact-link {
-  color: #cbd5e1;
+  color: #e2e8f0;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
   transition: all 0.3s ease;
   word-break: break-all;
 }
 
 .contact-link:hover {
-  color: #60a5fa;
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -223,6 +254,7 @@
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 24px 0;
+  margin-top: 20px;
 }
 
 .footer-bottom-content {
@@ -234,21 +266,21 @@
 }
 
 .copyright {
-  color: #94a3b8;
+  color: #93c5fd;
   font-size: 14px;
   margin: 0;
 }
 
 .developer-credit {
-  color: #94a3b8;
+  color: #93c5fd;
   font-size: 14px;
   margin: 0;
 }
 
 .developer-highlight {
-  color: #60a5fa;
+  color: #ffffff;
   font-weight: 500;
-  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  background: linear-gradient(135deg, #ffffff, #93c5fd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -256,10 +288,13 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .footer-content {
+  .footer-top-row {
     grid-template-columns: 1fr;
     gap: 40px;
-    padding: 40px 0 30px;
+  }
+  
+  .footer-content {
+    padding: 40px 0 20px;
   }
   
   .footer-container {
@@ -277,10 +312,7 @@
   }
   
   .faculty-list {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    padding-left: 0;
   }
 }
 
@@ -291,7 +323,6 @@
   
   .footer-content {
     padding: 30px 0 20px;
-    gap: 30px;
   }
   
   .footer-logo-text {
@@ -299,7 +330,7 @@
   }
   
   .footer-logo-icon {
-    font-size: 28px;
+    height: 28px;
   }
   
   .footer-heading {
@@ -311,31 +342,7 @@
     grid-template-columns: 1fr;
   }
   
-  .contact-link {
-    font-size: 13px;
+  .developer-card {
+    padding: 20px;
   }
-}
-
-/* Animation for scroll reveal */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.footer-section {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-.footer-section:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.footer-section:nth-child(3) {
-  animation-delay: 0.4s;
 }
