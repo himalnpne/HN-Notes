@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/HN-Notes/static/css/main.4d828ae7.css",
-    "main.js": "/HN-Notes/static/js/main.4a04da84.js",
+    "main.css": "/HN-Notes/static/css/main.1686b94a.css",
+    "main.js": "/HN-Notes/static/js/main.aab5b5a0.js",
     "static/js/453.88e03dc2.chunk.js": "/HN-Notes/static/js/453.88e03dc2.chunk.js",
+    "static/media/Logo.svg": "/HN-Notes/static/media/Logo.34eae6f435625274df61722325796f97.svg",
     "index.html": "/HN-Notes/index.html",
-    "main.4d828ae7.css.map": "/HN-Notes/static/css/main.4d828ae7.css.map",
-    "main.4a04da84.js.map": "/HN-Notes/static/js/main.4a04da84.js.map",
+    "main.1686b94a.css.map": "/HN-Notes/static/css/main.1686b94a.css.map",
+    "main.aab5b5a0.js.map": "/HN-Notes/static/js/main.aab5b5a0.js.map",
     "453.88e03dc2.chunk.js.map": "/HN-Notes/static/js/453.88e03dc2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d828ae7.css",
-    "static/js/main.4a04da84.js"
+    "static/css/main.1686b94a.css",
+    "static/js/main.aab5b5a0.js"
   ]
 }
