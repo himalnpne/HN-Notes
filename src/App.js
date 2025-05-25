@@ -12,7 +12,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/HN-Notes">
       <div className="App">
         <Header />
         
