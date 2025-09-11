@@ -12,10 +12,10 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/HN-Notes">
+    <Router>
       <div className="App">
         <Header />
-        
+
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -27,7 +27,7 @@ function App() {
             <Route path="/bim" element={<BIM />} />
           </Routes>
         </main>
-        
+
         <Footer />
       </div>
     </Router>
